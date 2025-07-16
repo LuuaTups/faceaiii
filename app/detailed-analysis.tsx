@@ -13,6 +13,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { ArrowLeft, Heart, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react-native';
 import { Stack, router } from 'expo-router';
 import { useAnalysis } from '@/hooks/useAnalysis';
+import Svg, { Circle } from 'react-native-svg';
 
 const featureEmojis: { [key: string]: string } = {
   'Eyebrows': '🤨',

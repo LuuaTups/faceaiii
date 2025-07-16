@@ -15,6 +15,7 @@ import { BlurView } from 'expo-blur';
 import { ArrowLeft, Share, Eye, Zap, User, ArrowDown, Heart, Sparkles, Lock } from 'lucide-react-native';
 import { Stack, router } from 'expo-router';
 import { useAnalysis } from '@/hooks/useAnalysis';
+import Svg, { Circle } from 'react-native-svg';
 
 const featureEmojis: { [key: string]: string } = {
   'Eyebrows': '🤨',
@@ -137,8 +138,8 @@ export default function ResultsScreen() {
     
     return (
       <View style={[styles.circularProgress, { width: size, height: size }]}>
-        <svg width={size} height={size} style={{ position: 'absolute' }}>
-          <circle
+        <Svg width={size} height={size} style={{ position: 'absolute' }}>
+          <Circle
             cx={size / 2}
             cy={size / 2}
             r={radius}
@@ -146,7 +147,7 @@ export default function ResultsScreen() {
             strokeWidth="4"
             fill="none"
           />
-          <circle
+          <Circle
             cx={size / 2}
             cy={size / 2}
             r={radius}
@@ -161,7 +162,7 @@ export default function ResultsScreen() {
               filter: `drop-shadow(0 0 8px ${getScoreColor(score)}40)`,
             }}
           />
-        </svg>
+        </Svg>
         <View style={styles.circularProgressContent}>
           <Text style={[styles.circularProgressScore, { color: getScoreColor(score) }]}>
             {score.toFixed(1)}
