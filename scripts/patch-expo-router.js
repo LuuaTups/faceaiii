@@ -6,6 +6,12 @@ const filePath = path.resolve(
 );
 
 try {
+  // Check if the file exists before trying to read it
+  if (!fs.existsSync(filePath)) {
+    console.warn("⚠️ expo-router _ctx.web.tsx not found, skipping patch");
+    process.exit(0);
+  }
+
   let content = fs.readFileSync(filePath, "utf8");
 
   // Replace the problematic line using a regex
@@ -22,4 +28,5 @@ try {
   }
 } catch (err) {
   console.error("❌ Error patching expo-router:", err);
+  process.exit(1);
 }
