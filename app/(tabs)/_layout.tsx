@@ -1,27 +1,9 @@
 import { Tabs } from 'expo-router';
-import { Chrome as Home, History, Lightbulb, User, Settings } from 'lucide-react-native';
+import { Home, History, Lightbulb, User, Settings } from 'lucide-react-native';
 
 export default function TabLayout() {
   return (
-    <Tabs
-      screenOptions={{
-        headerShown: false,
-        tabBarStyle: {
-          backgroundColor: 'rgba(0, 0, 0, 0.95)',
-          borderTopWidth: 1,
-          borderTopColor: 'rgba(255, 255, 255, 0.2)',
-          paddingBottom: 8,
-          paddingTop: 8,
-          height: 88,
-        },
-        tabBarActiveTintColor: '#FF69B4',
-        tabBarInactiveTintColor: 'rgba(255, 255, 255, 0.4)',
-        tabBarLabelStyle: {
-          fontSize: 12,
-          fontWeight: '500',
-          marginTop: 4,
-        },
-      }}>
+    <Tabs screenOptions={{ headerShown: false }}>
       <Tabs.Screen
         name="index"
         options={{
