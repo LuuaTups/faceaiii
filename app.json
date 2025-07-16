@@ -23,6 +23,6 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
   }
 }
